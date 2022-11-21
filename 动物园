@@ -1,0 +1,71 @@
+public class animal {
+    public  String kind;
+    public  String food;
+
+    public animal() {
+    }
+
+    public animal(String kind, String food) {
+        this.kind = kind;
+        this.food = food;
+    }
+
+    /**
+     * 获取
+     * @return kind
+     */
+    public String getKind() {
+        return kind;
+    }
+
+    /**
+     * 设置
+     * @param kind
+     */
+    public void setKind(String kind) {
+        this.kind = kind;
+    }
+
+    /**
+     * 获取
+     * @return food
+     */
+    public String getFood() {
+        return food;
+    }
+
+    /**
+     * 设置
+     * @param food
+     */
+    public void setFood(String food) {
+        this.food = food;
+    }
+
+    public String toString() {
+        return "animal{kind = " + kind + ", food = " + food + "}";
+    }
+
+    public void eat(){
+        System.out.println(this.kind+"喜欢吃"+this.food);
+    }
+
+    public void sleep(){
+        System.out.println(this.kind+"在睡觉");
+    }
+}
+
+public class zoo extends animal {
+    public zoo(String kind,String food){
+        super(kind, food);
+    }
+    public static void main(String[]args){
+        zoo cat=new zoo("猫","鱼");
+        zoo dog=new zoo("狗","骨头");
+        cat.eat();
+        cat.sleep();
+        dog.eat();
+        dog.sleep();
+        }
+}
+
